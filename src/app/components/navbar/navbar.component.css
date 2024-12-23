@@ -1,23 +1,46 @@
 nav{
+    background-color: white;
+}
+.navbar-mobile{
+    display: flex;
     width: 100%;
     height: 4rem;
-    border-top: 1px solid #000;
-    position:fixed;
-    bottom: 0%;
+    position: fixed;
+    bottom: 0px;
+    border-top: #000 solid 1px;
+     
+}
+.navbar-desktop{
+    display: none;
+    border-right: 1px solid #000;
+    height: 100%;
 }
 ul{
-    margin: 0%;
-    padding: 0%;
-    width: 100%;
     display: flex;
+    width: 100%;
+}
+.navbar-mobile ul{ 
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+}
+.navbar-desktop ul{
+    padding: 1rem;
+    flex-direction: column;
+    gap: 2rem;
 }
 li{
     list-style: none;
 }
-routerIcons{
+li a{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.routerIcons{
     width: 24px;
     height: 24px;
+}
+@media (min-width: 768px) {
 }
