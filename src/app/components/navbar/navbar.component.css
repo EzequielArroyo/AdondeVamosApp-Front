@@ -1,46 +1,79 @@
-nav{
-    background-color: white;
-}
-.navbar-mobile{
-    display: flex;
-    width: 100%;
-    height: 4rem;
-    position: fixed;
-    bottom: 0px;
-    border-top: #000 solid 1px;
-     
-}
-.navbar-desktop{
-    display: none;
-    border-right: 1px solid #000;
+.navbar{
     height: 100%;
+    display: flex;
+    border-top:1px solid #000;
+    background-color: #f8f9fa;
+    z-index: 1;
+   
 }
-ul{
+.nav-header{
+    display: none;
+}
+
+ul{ 
     display: flex;
     width: 100%;
-}
-.navbar-mobile ul{ 
     justify-content: space-around;
     align-items: center;
-}
-.navbar-desktop ul{
-    padding: 1rem;
-    flex-direction: column;
-    gap: 2rem;
-}
-li{
     list-style: none;
 }
-li a{
+.nav-link{
+    min-width: 48px;
+    aspect-ratio: 1;
     display: flex;
-    gap: 0.5rem;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
-    color: black;
+    
+    
+    
 }
-.routerIcons{
-    width: 24px;
-    height: 24px;
+.nav-link span{
+    display: none;
 }
+
 @media (min-width: 768px) {
+    .navbar{
+        border-bottom: none;
+        border-right: 1px solid #000;
+    }
+    .navbar ul{
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: start;
+        gap: 2rem;
+    }
+    .nav-header{
+        height: 50px;
+        display: block;
+        padding: 1rem;
+    }
+    .nav-header h1{
+        display: none;
+    }
+    
+}
+@media (min-width: 1024px) {
+    .nav-header{
+        display: block;
+        padding: 1rem;
+        font-weight: bold;
+    }.navbar ul{
+        align-items: start;
+    }
+    .nav-link{
+        display: flex;
+        aspect-ratio: 0;
+        
+        gap: 0.5rem;
+    }
+    .nav-link span{
+        display: block;
+        color: #000;
+        
+    }
+    .nav-header h1{
+        display: block;
+        font-size: 16px;
+    }
 }

@@ -4,7 +4,6 @@ header{
     height: 4rem;
     justify-content: center;
     align-items: center;
+    background-color: #f8f9fa;
     border-bottom: 1px solid #000;
-}
-@media (min-width: 768px) {
 }
