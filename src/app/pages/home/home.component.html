@@ -1,22 +1,6 @@
 <main class="activities-container">
-    <div class="header">
-        <h1>Activities </h1>
-    </div>
+        <h1 class="page-header">Activities </h1>
     <div class="activity-list">
-        <div *ngFor="let activity of activityList" class="activity-card">
-          <div class="activity-header">
-            <h3>{{activity.title}}</h3>
-            <span class="category-badge">{{activity.category}}</span>
-          </div>
-          <p class="description">{{activity.description}}</p>
-          <div class="activity-details">
-            <span><i class="far fa-calendar"></i> {{activity.date | date:'mediumDate'}}</span>
-            <span><i class="far fa-clock"></i> {{activity.time}}</span>
-          </div>
-          <div class="activity-participants">
-            <span>{{activity.participants}}/{{activity.maxParticipants}}</span>
-          </div>
-          <button class="join-btn">Join Activity</button>
-        </div>
+        <app-activity-card *ngFor="let activity of activityList" [activity]="activity"></app-activity-card>
       </div> 
 </main>
