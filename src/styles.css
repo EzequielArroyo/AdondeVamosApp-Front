@@ -1,11 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html, body {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-  }
+html,
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.ng-pristine:not(form) {
+  border: 1px solid #ccc;
+}
+/*inputs styles that affect to all forms*/
+input:focus {
+    outline: 1px solid #3498db;
+}
+.ng-pristine:not(form) {
+  border: 1px solid #ccc; /* default border color */
+}
+
+/* inputs styles that affect all forms */
+.ng-touched.ng-invalid:not(form) {
+  border: 1px solid #a94442; /* red */
+}
+
+.ng-dirty.ng-valid:not(form) {
+  border: 1px solid #42a948; /* green */
+}
+.error-message {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}

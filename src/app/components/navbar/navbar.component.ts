@@ -1,4 +1,4 @@
-import { Component, inject} from '@angular/core';
+import { Component, inject, signal} from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,5 +9,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  showCreateModal: boolean = false;
+  toggleCreateModal(){
+    this.showCreateModal = !this.showCreateModal;
+  }
 }
