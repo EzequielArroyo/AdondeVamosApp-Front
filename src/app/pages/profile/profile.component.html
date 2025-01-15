@@ -1,1 +1,59 @@
-<p>profile works!</p>
+<h1>Perfil</h1>
+<div *ngIf="(isUserLoggedIn && !editMode) || !isUserLoggedIn">
+  <p>{{user.id}}</p>
+  <p><b> username: </b> {{ user.username }}</p>
+  <p><b> Firstname: </b> {{ user.firstname }}</p>
+  <p><b> Lastname: </b> {{ user.lastname }}</p>
+  <p><b> email: </b> {{ user.email }}</p>
+  <button *ngIf="isUserLoggedIn && !editMode" (click)="editMode=true">Editar Datos Personales</button>
+</div>
+<form *ngIf="isUserLoggedIn && editMode" [formGroup]="registerForm" (ngSubmit)="savePersonalDetailsData()">
+  <div class="form-group">
+    <input
+      type="text"
+      formControlName="username"
+      class="form-control"
+      placeholder="Username"
+    />
+    <div *ngIf="hasErrors('username', 'required')" class="error-message">
+      Username is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      formControlName="firstname"
+      class="form-control"
+    />
+    <div *ngIf="hasErrors('firstname', 'required')" class="error-message">
+      Firstname is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      formControlName="lastname"
+      class="form-control"
+    />
+    <div *ngIf="hasErrors('lastname', 'required')" class="error-message">
+      Lastname is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      formControlName="email"
+      class="form-control"
+    />
+    <div *ngIf="hasErrors('email', 'required')" class="error-message">
+      email is required.
+    </div>
+    <div *ngIf="hasErrors('email', 'email')" class="error-message">
+        email format is incorrect
+      </div>
+  </div>
+  
+  
+  <button type="submit">Guardar</button>
+  <a>Cancelar</a>
+</form>

@@ -1,14 +1,11 @@
 <div class="login">
     <div class="login-content">
       <h2>¿Adonde vamos?</h2>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="loginForm" (ngSubmit)="loginResquest()">
         <div class="form-group">
-          <input type="text" formControlName="email" class="form-control" placeholder="Email">
-            <div *ngIf="hasErrors('email', 'required')" class="error-message">
-              Email is required.
-            </div>
-            <div *ngIf="hasErrors('email', 'email')" class="error-message">
-              Email must be a valid email address.
+          <input type="text" formControlName="username" class="form-control" placeholder="Username">
+            <div *ngIf="hasErrors('username', 'required')" class="error-message">
+              Username is required.
             </div>
         </div>
         <div class="form-group">
@@ -23,3 +20,4 @@
       </form>
     </div>
 </div>
+<app-error-modal [showModal]="showErrorModal()" [errorMessage]="errorMessage()" (modalClosed) = "showErrorModal.set(false)"></app-error-modal>

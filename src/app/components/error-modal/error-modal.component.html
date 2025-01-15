@@ -1,0 +1,15 @@
+<div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Error</h2>
+        <button (click)="closeModal()">X</button>
+      </div>
+      <div class="modal-body">
+        <p>{{ errorMessage }}</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-close" (click)="closeModal()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  
