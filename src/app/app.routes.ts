@@ -1,13 +1,37 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { CreateComponent } from './pages/create/create.component';
-import { InboxComponent } from './pages/inbox/inbox.component';
+
+
 
 export const routes: Routes = [
-    {path: '', component: HomeComponent},
-    {path: 'create', component: CreateComponent},
-    {path: 'inbox', component: InboxComponent},
-    {path: 'profile', component: ProfileComponent},
-    {path: '**', redirectTo: '',pathMatch: 'full'}
-];
+    {
+        path: 'login',
+        loadComponent: () => import('./features/auth/login/login.component').then(c => c.LoginComponent)
+      },
+      {
+        path: 'register',
+        loadComponent: () => import('./features/auth/register/register.component').then(c => c.RegisterComponent)
+      },
+      {
+        path: '', // Ruta principal de Dashboard
+       loadComponent: () => import('./features/main-layout/main-layout.component').then(c => c.MainLayoutComponent),
+        children: [
+          {
+            path: 'home', // Ruta hija para Home
+            loadComponent: () => import('./features/home/home.component').then(c => c.HomeComponent)
+          },
+          {
+            path: 'profile', // Ruta hija para Profile
+            loadComponent: () => import('./features/profile/profile.component').then(c => c.ProfileComponent)
+          },
+          {
+            path: '**', // Redirecciona a 'home' por defecto si la ruta hija no existe
+            redirectTo: 'home'
+          }
+        ]
+      },
+      {
+        path: '**', // Redirecciona a 'login' si la ruta no es válida
+        redirectTo: 'login'
+      }
+    
+]
