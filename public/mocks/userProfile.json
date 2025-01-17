@@ -1,0 +1,29 @@
+{
+    "userProfile": {
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "birthdate": "1990-05-15",
+      "sex": "Female",
+      "phone": "+1-234-567-890",
+      "location": "New York, USA",
+      "languages": ["Spanish", "English"],
+      "bio": "Avid traveler and foodie. Passionate about technology and education.",
+      "occupation": "Software Engineer",
+      "interests": ["Hiking", "Reading", "Photography"],
+      "activities": [
+        {
+          "id": 1,
+          "title": "Morning Yoga",
+          "datetime": "2025-01-17T06:30:00",
+          "description": "A relaxing yoga session to start the day."
+        },
+        {
+          "id": 2,
+          "title": "Team Meeting",
+          "datetime": "2025-01-17T10:00:00",
+          "description": "Weekly sync with the project team to review progress."
+        }    
+      ]
+    }
+  }
+  
