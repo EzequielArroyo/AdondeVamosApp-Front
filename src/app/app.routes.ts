@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ProfileComponent } from './features/profile/profile.component';
 
 
 
@@ -21,7 +22,7 @@ export const routes: Routes = [
           },
           {
             path: 'profile', // Ruta hija para Profile
-            loadComponent: () => import('./features/profile/profile.component').then(c => c.ProfileComponent)
+            component: ProfileComponent
           },
           {
             path: '**', // Redirecciona a 'home' por defecto si la ruta hija no existe

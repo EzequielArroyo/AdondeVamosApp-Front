@@ -1,0 +1,148 @@
+/* General styles */
+.profile {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow-md */
+  max-width: 1224px;  
+  padding: 1.5rem;
+  margin: auto;
+}
+.profile-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.text-gray {
+  color: #6b7280;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+/* User Info layout */
+.user-details {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.section-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  background: #e5f3ff;
+  color: #3b82f6;
+  padding: 4px 8px;
+  border-radius: 16px;
+}
+
+.language-badge {
+  background: #d1e7ff;
+  color: #1d4ed8;
+}
+
+.interest-badge {
+  background: #def7e8;
+  color: #047857;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .user-info {
+    grid-template-columns: 1fr;
+  }
+}
+/*Activity card*/
+.profile-activities {
+  margin-top: 2rem;
+}
+.activity-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f9fafb; /* bg-gray-50 */
+  border-radius: 0.5rem; /* rounded-lg */
+}
+
+.activity-title {
+  font-weight: 500; /* font-medium */
+}
+
+.activity-date {
+  font-size: 0.875rem; /* text-sm */
+  color: #4b5563; /* text-gray-600 */
+}
+
+.activity-actions {
+  display: flex;
+  gap: 0.5rem; /* space-x-2 */
+}
+
+.edit-button,
+.delete-button {
+  padding: 0.5rem; /* p-2 */
+  border: none;
+  border-radius: 50%; /* rounded-full */
+  cursor: pointer;
+}
+
+.edit-button {
+  color: #2563eb; /* text-blue-600 */
+  background-color: transparent;
+}
+
+.edit-button:hover {
+  background-color: #eff6ff; /* hover:bg-blue-50 */
+}
+
+.delete-button {
+  color: #dc2626; /* text-red-600 */
+  background-color: transparent;
+}
+
+.delete-button:hover {
+  background-color: #fee2e2; /* hover:bg-red-50 */
+}
+

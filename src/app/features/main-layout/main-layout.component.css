@@ -5,11 +5,22 @@
     grid-template-columns: 245px 1fr;
     grid-template-rows: 1fr;
 }
+.main-content{
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(243,244,246);
+    padding: 3rem;
+
+}
 @media (max-width: 1023px) {
     .grid-layout{
         grid-template-columns: 74px 1fr;
         
     }
+    .main-content{
+        padding: 2rem;
+    }
+    
 }
 @media (max-width: 767px) {
     .grid-layout{
