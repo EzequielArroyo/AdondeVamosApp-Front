@@ -30,7 +30,7 @@
 }
 
 .text-gray {
-  color: #6b7280;
+  color: rgb(100, 110, 120);
 }
 
 .icon-text {
@@ -71,27 +71,6 @@
   gap: 0.5rem;
   margin-top: 8px;
 }
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.875rem;
-  background: #e5f3ff;
-  color: #3b82f6;
-  padding: 4px 8px;
-  border-radius: 16px;
-}
-
-.language-badge {
-  background: #d1e7ff;
-  color: #1d4ed8;
-}
-
-.interest-badge {
-  background: #def7e8;
-  color: #047857;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
   .user-info {
@@ -117,7 +96,6 @@
 
 .activity-date {
   font-size: 0.875rem; /* text-sm */
-  color: #4b5563; /* text-gray-600 */
 }
 
 .activity-actions {

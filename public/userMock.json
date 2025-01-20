@@ -1,6 +1,8 @@
 {
-    "userProfile": {
-      "name": "Jane Doe",
+      "id": 1,
+      "username": "JaneDoe09",
+      "firstName": "Jane",
+      "lastName": "Doe",
       "email": "jane.doe@example.com",
       "birthdate": "1990-05-15",
       "sex": "Female",
@@ -24,6 +26,5 @@
           "description": "Weekly sync with the project team to review progress."
         }    
       ]
-    }
   }
   
