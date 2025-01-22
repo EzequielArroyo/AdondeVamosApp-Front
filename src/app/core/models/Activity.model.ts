@@ -3,4 +3,8 @@ export interface Activity {
     title: string;
     datetime: Date;
     description: string;
+    location: string;
+    participants: number;
+    maxParticipants: number;
+    category: string;
 }

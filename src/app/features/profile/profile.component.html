@@ -1,17 +1,17 @@
 <div class="profile" *ngIf="user | async as userData">
-  <div class="profile-section profile-header">
+  <div class="profile-header">
     <img
       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
       class="avatar"
     />
-    <h2 class="title">{{userData.username}}</h2>
-    <h3>{{userData.firstName}} {{userData.lastName}}</h3>
+    <h1 class="title">{{userData.username}}</h1>
+    <h2>{{userData.firstName}} {{userData.lastName}}</h2>
   </div>
 
   <div class="user-details">
     <div class="user-info">
       <div class="section-info">
-        <h3 class="section-title">Personal Information</h3>
+        <h2 class="section-title">Personal Information</h2>
         <p class="text-gray icon-text">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@
         </p>
       </div>
       <div class="section-info">
-        <h3 class="section-title">Languages</h3>
+        <h2 class="section-title">Languages</h2>
         <div class="badge-container" >
             <app-badge class="blue" *ngFor="let languageText of userData.languages" [badgeText]="languageText" [iconName]="'language'" [colorClass]="'blue'"></app-badge>     
         </div>
@@ -93,7 +93,7 @@
 
     <div class="user-info">
       <div class="section-info">
-        <h3 class="section-title">Bio</h3>
+        <h2 class="section-title">Bio</h2>
         <p class="text-gray">{{userData.bio}}</p>
       </div>
 
@@ -103,7 +103,7 @@
       </div>
 
       <div class="section-info">
-        <h3 class="section-title">Interests</h3>
+        <h2 class="section-title">Interests</h2>
         <div class="badge-container">
           <app-badge *ngFor="let InterestText of userData.interests" [badgeText]="InterestText" [colorClass]="'green'"></app-badge>
         </div>
@@ -111,20 +111,7 @@
     </div>
   </div>
   <div class="profile-activities">
-    <h3 class="section-title">My Activities</h3> 
-    <div *ngFor="let activity of userData.activities" class="activity-card">
-      <div>
-        <h4 class="activity-title">{{activity.title}}</h4>
-        <p class="activity-date text-gray">{{activity.datetime | date:'short'}}</p>
-      </div>
-      <div class="activity-actions">
-        <button class="edit-button">
-          <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill=" #3b82f6"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
-        </button>
-        <button class="delete-button">
-          <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#dc2626"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-        </button>
-      </div>
-    </div>
+    <h2 class="section-title">My Activities</h2> 
+    <app-activity-card *ngFor="let activity of userData.activities" [activity]="activity" [showEditButton]="true"></app-activity-card>
   </div>
 </div>

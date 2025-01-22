@@ -4,11 +4,12 @@ import { User } from '../../core/models/User.model';
 import { Observable } from 'rxjs';
 import { AsyncPipe, DatePipe, NgFor, NgIf } from '@angular/common';
 import { BadgeComponent } from '../../shared/components/badge/badge.component';
+import { ActivityCardComponent } from '../../shared/components/activity-card/activity-card.component';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [NgIf,NgFor, AsyncPipe, BadgeComponent, DatePipe],
+  imports: [NgIf, NgFor, AsyncPipe, BadgeComponent,  ActivityCardComponent],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
