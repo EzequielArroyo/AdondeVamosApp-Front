@@ -19,8 +19,3 @@ body {
 .text-gray {
   color: var(--text-gray);
 }
-@font-face {
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-  src: url(https://example.com/material-symbols.woff) format('woff');
-}
