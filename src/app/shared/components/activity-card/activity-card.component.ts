@@ -12,7 +12,9 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class ActivityCardComponent {
   activity = input<Activity>();
-  showEditButton = input<boolean>();
+  showActionButtons = input<boolean>();
   
-
+  test() {
+    console.log('test');
+  }
 }

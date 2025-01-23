@@ -14,9 +14,9 @@
     <p class="activity-description">{{ activity()?.description }}</p>
     <div class="activity-footer">
       <span class="activity-participants"> {{ activity()?.participants }} participants </span>
-      <button *ngIf="!showEditButton" class="activity-join-button">Join Activity</button>
-      <div *ngIf="showEditButton" class="action-buttons">
-        <app-button [buttonIcon]="'edit'" [buttonText]="'Edit'" [buttonClass]="'edit'"/>
+      <button *ngIf="!showActionButtons" class="activity-join-button">Join Activity</button>
+      <div *ngIf="showActionButtons" class="action-buttons">
+        <app-button (click)="test()" [buttonIcon]="'edit'" [buttonText]="'Edit'" [buttonClass]="'edit'"/>
         <app-button [buttonIcon]="'delete'" [buttonText]="'Delete'" [buttonClass]="'danger'"/>
       </div>
     </div>
