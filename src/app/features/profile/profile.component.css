@@ -28,11 +28,6 @@
   font-weight: bold;
   margin-bottom: 8px;
 }
-
-.text-gray {
-  color: rgb(100, 110, 120);
-}
-
 .icon-text {
   display: flex;
   align-items: center;
@@ -45,6 +40,8 @@
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #d1d5db;
 }
 
 .user-info {
@@ -71,64 +68,23 @@
   gap: 0.5rem;
   margin-top: 8px;
 }
-/* Responsive design */
-@media (max-width: 768px) {
-  .user-info {
-    grid-template-columns: 1fr;
-  }
-}
-/*Activity card*/
+
 .profile-activities {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.activity-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: #f9fafb; /* bg-gray-50 */
-  border-radius: 0.5rem; /* rounded-lg */
+
+/* Responsive design */
+@media (max-width: 1023px) {
+  
+  
+}
+@media (max-width: 767px) {
+  .user-details{
+    grid-template-columns: 1fr;
+  }
 }
 
-.activity-title {
-  font-weight: 500; /* font-medium */
-}
-
-.activity-date {
-  font-size: 0.875rem; /* text-sm */
-}
-
-.activity-actions {
-  display: flex;
-  gap: 0.5rem; /* space-x-2 */
-}
-
-.edit-button,
-.delete-button {
-  padding: 0.5rem; /* p-2 */
-  border: none;
-  border-radius: 50%; /* rounded-full */
-  cursor: pointer;
-}
-
-.edit-button {
-  color: #2563eb; /* text-blue-600 */
-  background-color: transparent;
-}
-
-.edit-button:hover {
-  background-color: #eff6ff; /* hover:bg-blue-50 */
-}
-
-.delete-button {
-  color: #dc2626; /* text-red-600 */
-  background-color: transparent;
-}
-
-.delete-button:hover {
-  background-color: #fee2e2; /* hover:bg-red-50 */
-}
 
